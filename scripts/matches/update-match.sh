@@ -1,16 +1,17 @@
 #!/bin/bash
+
 API="${API_ORIGIN:-http://localhost:4741}"
 # API="${API_ORIGIN:-https://seedsower.herokuapp.com}"
-URL_PATH="/offers"
+URL_PATH="/matches/${ID}"
 curl "${API}${URL_PATH}" \
   --include \
-  --request POST \
+  --request PATCH \
   --header "Content-Type: application/json" \
   --header "Authorization: Token token=$TOKEN" \
   --data '{
-    "offer": {
-      "user_id": "'"${ID}"'",
-      "offer_type": "'"${TYPE}"'"
+    "match": {
+      "offer_id": "'"${OFFERID}"'",
+      "request_id": "'"${REQUESTID}"'"
     }
   }'
 

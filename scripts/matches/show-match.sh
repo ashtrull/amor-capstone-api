@@ -1,6 +1,6 @@
 API="${API_ORIGIN:-http://localhost:4741}"
 # API="${API_ORIGIN:-https://seedsower.herokuapp.com}"
-URL_PATH="/requests/${ID}"
+URL_PATH="/matches/${ID}"
 curl "${API}${URL_PATH}" \
   --include \
   --request GET \

@@ -8,12 +8,9 @@ curl "${API}${URL_PATH}" \
   --header "Content-Type: application/json" \
   --header "Authorization: Token token=$TOKEN" \
   --data '{
-    "plant": {
-      "name": "'"${NAME}"'",
-      "indoor_start": "'"${ISTART}"'",
-      "growth_period": "'"${GROWTH}"'",
-      "outdoor_start": "'"${OSTART}"'"
-    }
-  }'
-
+      "request": {
+        "user_id": "'"${ID}"'",
+        "request_type": "'"${TYPE}"'"
+      }
+    }'
 echo
