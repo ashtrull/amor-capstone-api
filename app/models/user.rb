@@ -2,6 +2,6 @@
 
 class User < ApplicationRecord
   include Authentication
-  has_many :offers
-  has_many :requests
+  has_many :offers, dependent: :destroy
+  has_many :requests, dependent: :destroy
 end
