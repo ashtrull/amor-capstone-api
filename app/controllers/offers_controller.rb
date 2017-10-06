@@ -8,7 +8,7 @@ class OffersController < ApplicationController
     render json: @offers
   end
 
-  # GET /offers/1
+  # GET /offers
   def show
     render json: @offer
   end
